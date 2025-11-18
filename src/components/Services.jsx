@@ -1,4 +1,5 @@
 import { Shield, Cloud, Code2, Rocket } from 'lucide-react';
+import TiltCard from './TiltCard';
 
 const services = [
   {
@@ -34,13 +35,13 @@ export default function Services() {
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {services.map(({ title, desc, icon: Icon }) => (
-            <div key={title} className="rounded-2xl border border-white/10 bg-gradient-to-br from-slate-800/60 to-slate-900/60 p-6 hover:from-slate-800 hover:to-slate-900 transition group">
+            <TiltCard key={title} className="group relative rounded-2xl border border-white/10 bg-gradient-to-br from-slate-800/60 to-slate-900/60 p-6 hover:from-slate-800 hover:to-slate-900 transition">
               <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10 text-blue-400 ring-1 ring-inset ring-blue-400/20 group-hover:scale-105 transition">
                 <Icon size={22} />
               </div>
               <h3 className="text-white font-semibold">{title}</h3>
               <p className="mt-2 text-sm text-slate-300">{desc}</p>
-            </div>
+            </TiltCard>
           ))}
         </div>
       </div>
